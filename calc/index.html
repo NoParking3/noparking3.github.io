@@ -34,5 +34,8 @@
       <td>+</td>
     </tr>
   </table>
+<p>
+for f in *.m4a; do ffmpeg -i "$f" -codec:a libmp3lame -qscale:a 2 "${f%.m4a}.mp3" && rm "$f"; done
+</p>
 </body>
 </html>
